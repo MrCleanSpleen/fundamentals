@@ -1,0 +1,4 @@
+#!/usr/bin/env python3
+import skilstak.colors as c
+
+print(c.cl + c.rc() + "Hello " + c.rc() + "World" + c.x)
