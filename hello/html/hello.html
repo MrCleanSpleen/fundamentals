@@ -1,0 +1,35 @@
+<!doctype html>
+
+<html>
+  <head>
+  <title>Hello World</title>
+  link
+  </head>
+  <style>
+    body {
+      font-family: "Helvetica","Arial",sans-serif;
+      font-size: 200%;
+      background: #002B36;
+      color: cyan;
+    }
+    .fat {font-weight: bold; } 
+    #h {color: goldenrod; }
+
+
+  </style>
+  <body>
+    <p>Hello world! Glorious World!</p>
+  </body>  
+  <script>
+    document.write(document.lastModifies);
+    console.log("Hello from JavaScript!");
+    var w = document.querySelector("#w");
+    w.textContent = "Alexander!";
+    var n = document.getElementById("name")
+    n.addEventListener("input", function () {
+      w.textContent = n.textContent;
+    }, false);
+  </script>  
+</html>
+
+
