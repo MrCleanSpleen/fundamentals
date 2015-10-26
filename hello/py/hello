@@ -1,14 +1,10 @@
 #!/usr/bin/env python3
-import skilstak.colors as c
-import time as t
-try:
-    print(c.cl)
-    while True:
-        print(c.rc() + "Hello " + c.rc() + "World" + c.x, end=" ")
-except KeyboardInterrupt:
-    print(c.cl + "Sorry, but you can't stop this program.")
-    t.sleep(3)
-    try:
-        print(c.clear)
-        while True:
-            print(c.rc() + "Hello " + c.rc() + "World" + c.x, end=" ")
+def hello():
+    """Print Hello World in random colors"""
+    import skilstak.colors as c
+    print(c.cl + c.rc() + "Hello " + c.rc() + "World!" + c.x)
+
+
+if __name__ == '__main__':
+    hello()
+                                                                                                                                         
