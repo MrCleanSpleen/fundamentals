@@ -24,5 +24,10 @@ def hello():
 
 if __name__ == '__main__'
     import sys
-    hello()
+    if len (sys.argv) > 1 and sys.argv[1] startswith ("c"):
+        colored.hello()
+    if len(sys.argv) == 1:
+        hello()
+    else:
+        hello(sys.argv[1])
                                                                                                                                          
