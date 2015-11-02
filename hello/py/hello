@@ -15,7 +15,8 @@ def colored_hello():
         print(c.clear)
         while True:
             print_colored("Hello world!")
-    except KeyboardInterrupt
+    except KeyboardInterrupt:
+        exit()
 def hello():
     """Print Hello World to the console in random colors"""
     while True:
