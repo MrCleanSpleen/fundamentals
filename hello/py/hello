@@ -2,24 +2,45 @@
 import time as t
 import skilstak.colors as c
 def plain(message):
+    """Prints Hello World to the Console"""
     print(c.cl + c.rc() + message + c.x)
 
 def multi(message):
+    """Lights up text in random colors like a Christmas Tree"""
     while True:
         print(c.clear + c.multi(message))
         t.sleep(0.5)
+
 def color(message):
+    """Prints Hello World in random colors all over the screen"""
     print(c.cl)
     while True:
-        print(c.rc() + message + c.reset, end = " "
+        print(c.rc() + message + c.reset, end = " ")
 
 
 if __name__ == '__main__':
     import sys
-    if len (sys.argv) > 1 and sys.argv[1].startswith("c"):
-        colored_hello()
-    if len(sys.argv) == 1:
-        hello()
-    else:
-        hello(sys.argv[1])
-                                                                                                                                         
+    who = "world"
+    message = ""
+    option = ""
+
+    if len(sys.argv) > 2:
+        option = sys.argv[1]
+        who = sys.argv[2]
+    elif len(sys.argv) == 2:
+        if sys.argv[1].startswith("-"):
+            option = sys.argv[1]
+        else:
+            who = sys.argv[1]
+    message = "Hello, " + who + "!"
+
+    try:
+        if option == "-m":
+            multi(message)
+        elif option == "-c":
+            color(message)
+        else:
+            plain(message)
+    except KeyboardInterrupt:
+        exit()
+
