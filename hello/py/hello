@@ -5,4 +5,13 @@ import skilstak.colors as c
 
 
 if __name__ == '__main__':
-    
+    p = hello.parse_args()
+    try:
+         if option == "-m":
+            multi(message)
+         elif option == "-c":
+            color(message)
+         else:
+            plain(message)
+    except KeyboardInterrupt:
+        exit()   

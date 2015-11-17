@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-import sys
 import time as t
 import skilstak.colors as c
 def print_plain(message):
@@ -18,7 +16,8 @@ def print_colored(message):
     while True:
         print(c.rc() + message + c.reset, end = " ")
 
-def parse(args):
+def parse_args():
+    import sys
     p = {
             "who":"world",
             "option": ""
@@ -26,13 +25,10 @@ def parse(args):
     
     if len(sys.argv) > 2:
        p['option'] = sys.argv[1]
-        who = sys.argv[2]
+       p["who"] = sys.argv[2]
     elif len(sys.argv) == 2:
         if sys.argv[1].startswith("-"):
            p['option'] = sys.argv[1]
         else:
             p['who'] = sys.argv[1]
         return p
-
-if __name__ == '__main__':
-    pass
