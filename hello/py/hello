@@ -5,10 +5,8 @@ import skilstak.colors as c
 
 
 if __name__ == '__main__':
-    p = hello.parse_args()
-    option = p['option']
-    message = 'Hello ' + p['who'] + '!'
-    
+    name, option = hello.parse_args()
+    message = "Hello " + name + "!"
     try:
         if option == "-f":
             hello.print_forever(message)
@@ -16,7 +14,9 @@ if __name__ == '__main__':
             hello.print_multi(message)
         elif option == "-c":
             hello.print_color(message)
-        elif option == "-h":
+        elif option == "-a":
+            hello.print_murica(message)
+        else:
             hello.print_plain(message)
     except KeyboardInterrupt:
         exit()   
