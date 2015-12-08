@@ -27,6 +27,8 @@ def print_forever(message):
         print(c.rc() + message + c.reset, end = " ")
 
 def parse_args():
+    """Allows the user to choose what the message should be and how it should be printed, ie 
+    print_color, print_forever, print_multi, print_plain, or print_murica."""
     import sys
     name = "world"
     option = ""
