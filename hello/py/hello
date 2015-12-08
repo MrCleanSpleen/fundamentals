@@ -6,17 +6,23 @@ import skilstak.colors as c
 
 if __name__ == '__main__':
     name, option = hello.parse_args()
+    """Sets up the message to use in each "print_" function"""
     message = "Hello " + name + "!"
     try:
         if option == "-f":
+            """Prints the message forever in random colors"""
             hello.print_forever(message)
         elif option == "-m":
+            """Prints the message in a different letter for every character, changing every 0.5 seconds"""
             hello.print_multi(message)
         elif option == "-c":
+            """Prints the message in a random color once"""
             hello.print_color(message)
         elif option == "-a":
+            """Prints the message in red, white and blue forever. #Murica"""
             hello.print_murica(message)
         else:
+            """Prints the message once, using no colors. So boring :p"""
             hello.print_plain(message)
     except KeyboardInterrupt:
         exit()   
