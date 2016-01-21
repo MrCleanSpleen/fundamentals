@@ -3,27 +3,36 @@ package main
 import (
 	"fmt"
 	c "github.com/skilstak/go/colors"
+	//"strings"
 	//i "github.com/skilstak/go/input"
 )
 
+func printPlain() {
+	//Prints "Hello World!" to the command line.
+	fmt.Println(c.Clear + "Hello World" + c.X)
+}
 func printRandom() {
 	//Prints "Hello World" to the command line in random color.
 	fmt.Println(c.Clear + c.Rc() + "Hello World!" + c.X)
 }
 
-func main() {
+func printForevah() {
 	//Prints "Hello World" in a random color forever in a loop.
 	for {
 		fmt.Println(c.Rc() + "Hello World" + c.X)
 	}
 }
 
-func main1() {
-	//Prints "Hello World!" to the command line.
-	fmt.Println(c.Clear + "Hello World" + c.X)
+func main() {
+	printMulti("Hello " + getName())
 }
 
-func printMulti() {
+func getName() string {
+	name := "Alexander"
+	return name
+}
+
+func printMulti(message string) {
 	//Prints "Hello World!" To the command line, with each character a random color.
-	fmt.Println(c.Clear + c.Multi("Hello World") + c.X)
+	fmt.Println(c.Clear + c.Multi(message) + c.X)
 }
