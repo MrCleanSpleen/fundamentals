@@ -5,6 +5,7 @@ import (
 	c "github.com/skilstak/go/colors"
 	//"strings"
 	//i "github.com/skilstak/go/input"
+	"os"
 )
 
 func printPlain() {
@@ -24,10 +25,14 @@ func printForevah() {
 }
 
 func main() {
+	name := os.Args[1]
 	printMulti("Hello " + getName())
 }
+func parseArgs() {
 
+}
 func getName() string {
+	//Gives the var "name" a value and returns it.
 	name := "Alexander"
 	return name
 }
