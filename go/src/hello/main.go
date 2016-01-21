@@ -25,8 +25,11 @@ func printForevah() {
 }
 
 func main() {
-	name := os.Args[1]
-	printMulti("Hello " + getName())
+	name := "YOU"
+	if len(os.Args) > 1 {
+		name = os.Args[1]
+	}
+	printMulti("Hello " + name)
 }
 func parseArgs() {
 
