@@ -6,7 +6,6 @@ import (
 	s "strings"
 	//i "github.com/skilstak/go/input"
 	"os"
-	t "time"
 )
 
 func PrintPlain(message string) {
@@ -21,7 +20,6 @@ func PrintMulti(message string) {
 	//Prints Hello World to the command line with each character a different color.
 	for {
 		fmt.Println(c.Multi("Hello " + message + c.Clear))
-		t.Sleep(500 * t.Milliseconds)
 	}
 }
 func PrintForevah(message string) {
@@ -31,18 +29,21 @@ func PrintForevah(message string) {
 	}
 }
 
-func ParseArgs() {
+func ParseArgs() (string, string) {
 	//Parses arguments from the command line
 	name := "YOU"
 	option := ""
 	if len(os.Args) > 2 {
-		if s.HasPrefix(os.Args[1], "-") {
-			option = os.Args[1]
-			name = os.Args[2]
-		}
+		option = os.Args[1]
+		name = os.Args[2]
 	}
 	if len(os.Args) == 2 {
-		name = os.Args[1]
-	}
+		if s.HasPrefix(os.Args[1], "-") {
+			option = os.Args[1]
+		} else {
+			name = os.Args[1]
+		}
 
+	}
+	return name, option
 }

@@ -2,15 +2,10 @@ package main
 
 import (
 	h "hello"
-	"fmt"
-	c "github.com/skilstak/go/colors"
-	//"strings"
-	//i "github.com/skilstak/go/input"
-	"os"
 )
 
 func main() {
-	name, option = h.ParseArgs()
+	name, option := h.ParseArgs()
 	message := "Hello " + name + "!"
 
 	if option == "-m" {
@@ -18,4 +13,8 @@ func main() {
 	} else if option == "-r" {
 		h.PrintRandom()
 	} else if option == "-f" {
-
+		h.PrintForevah()
+	} else {
+		h.PrintPlain()
+	}
+}
