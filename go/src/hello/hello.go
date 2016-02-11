@@ -19,11 +19,8 @@ func PrintRandom(message string) {
 }
 func PrintMulti(message string) {
 	//Prints Hello World to the command line with each character a different color.
-	for {
-		fmt.Println(c.Multi("Hello " + message + c.Clear))
-		time.Sleep(50000)
-		fmt.Print(c.Clear)
-	}
+
+	fmt.Println(c.Multi("Hello " + message + c.Clear))
 }
 func PrintForevah(message string) {
 	//Prints "Hello World" in a random color forever in a loop.
