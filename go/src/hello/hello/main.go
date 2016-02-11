@@ -6,15 +6,15 @@ import (
 
 func main() {
 	name, option := h.ParseArgs()
-	message := "Hello " + name + "!"
+	message := name + "!"
 
 	if option == "-m" {
-		h.PrintMulti()
+		h.PrintMulti(message)
 	} else if option == "-r" {
-		h.PrintRandom()
+		h.PrintRandom(message)
 	} else if option == "-f" {
-		h.PrintForevah()
+		h.PrintForevah(message)
 	} else {
-		h.PrintPlain()
+		h.PrintPlain(message)
 	}
 }

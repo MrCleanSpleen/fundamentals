@@ -43,7 +43,6 @@ func ParseArgs() (string, string) {
 		} else {
 			name = os.Args[1]
 		}
-
 	}
 	return name, option
 }
