@@ -6,6 +6,7 @@ import (
 	s "strings"
 	//i "github.com/skilstak/go/input"
 	"os"
+	"time"
 )
 
 func PrintPlain(message string) {
@@ -18,7 +19,11 @@ func PrintRandom(message string) {
 }
 func PrintMulti(message string) {
 	//Prints Hello World to the command line with each character a different color.
-	fmt.Println(c.Multi("Hello " + message + c.Clear))
+	for {
+		fmt.Println(c.Multi("Hello " + message + c.Clear))
+		time.Sleep(50000)
+		fmt.Print(c.Clear)
+	}
 }
 func PrintForevah(message string) {
 	//Prints "Hello World" in a random color forever in a loop.
