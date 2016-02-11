@@ -9,29 +9,29 @@ import (
 	t "time"
 )
 
-func printPlain(message string) {
+func PrintPlain(message string) {
 	//Prints "Hello World!" to the command line.
-	fmt.Println(c.Clear + "Hello World" + c.X)
+	fmt.Println(c.Clear + "Hello " + message + c.X)
 }
-func printRandom(message string) {
+func PrintRandom(message string) {
 	//Prints "Hello World" to the command line in random color.
 	fmt.Println(c.Clear + c.Rc() + "Hello " + message + c.X)
 }
-func printMulti(message string) {
+func PrintMulti(message string) {
 	//Prints Hello World to the command line with each character a different color.
 	for {
 		fmt.Println(c.Multi("Hello " + message + c.Clear))
 		t.Sleep(500 * t.Milliseconds)
 	}
 }
-func printForevah(message string) {
+func PrintForevah(message string) {
 	//Prints "Hello World" in a random color forever in a loop.
 	for {
 		fmt.Print(c.Rc() + "Hello " + message + c.X)
 	}
 }
 
-func parseArgs() {
+func ParseArgs() {
 	//Parses arguments from the command line
 	name := "YOU"
 	option := ""
