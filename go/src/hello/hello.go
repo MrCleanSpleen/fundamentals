@@ -6,7 +6,6 @@ import (
 	s "strings"
 	//i "github.com/skilstak/go/input"
 	"os"
-	"time"
 )
 
 func PrintPlain(message string) {
