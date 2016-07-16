@@ -2,10 +2,12 @@ package main
 
 import (
 	"fmt"
-	"strconv"
+	"io/ioutil"
 )
 
 func main() {
-	s := strconv.Itoa(42)
-	fmt.Println(s)
+	files, _ := ioutil.ReadDir("./")
+	for _, f := range files {
+		fmt.Println(f.Name())
+	}
 }
